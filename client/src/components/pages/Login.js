@@ -39,7 +39,6 @@ const Login = (props) => {
       </form>
       <div className="question">
       {errors !== null && <button className="danger">
-        {errors ? 'Invalid Credentials' : 'Email or Password not Error'}
       <span onClick={() => clearErrors()}>X</span></button>}
       <p>Don't have an account? {" "} <Link to = '/register'>Sign Up</Link></p>
       </div>
@@ -48,3 +47,4 @@ const Login = (props) => {
 }
 
 export default Login;
+
