@@ -3,7 +3,6 @@ const {check, validationResult} = require('express-validator')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-
 // user model
 const User = require('../models/User')
 
@@ -48,9 +47,12 @@ async (req, res) => {
         })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send('Server Error') 
+        res.status(500).send('Server Error 1') 
     }
 })
+
+
+
 
 module.exports = router
 

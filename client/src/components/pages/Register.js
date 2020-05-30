@@ -46,8 +46,7 @@ const Register = (props) => {
       <input type="submit" value="Sign Up" className="btn"></input>
       </form>
       <div className="question">
-      {errors !== null && <button className="danger">
-      {errors.msg ? errors.msg : errors.error[0].msg}
+      {errors !== null && <button className="danger">Errors
       <span onClick={() => clearErrors()}>X</span></button>}
       <p>Already have an account? {""} <Link to = '/login'>Login</Link></p>
       </div>

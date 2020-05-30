@@ -27,7 +27,7 @@ import {
         localStorage.setItem('token', action.payload.token)
         return {
           ...state,
-          ...action.payload,
+          // ...action.payload,
           userAuth: true,
           loading: false,
           errors: null

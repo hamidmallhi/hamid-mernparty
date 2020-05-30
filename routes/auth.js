@@ -10,6 +10,8 @@ const User = require('../models/User')
 
 // Get Route - private route or protected route
 router.get('/', auth, async (req, res) => {
+   
+
 try {
     const user = await User.findById(req.user.id).select("-password")
     res.json(user)
@@ -54,9 +56,10 @@ async (req, res) => {
         })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send('Server Error') 
+        res.status(500).send('Server Error 1') 
     }
 })
 
 module.exports = router
+
 
