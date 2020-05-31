@@ -49,14 +49,14 @@ async (req, res) => {
             }
         }
         jwt.sign(payload, process.env.JWT_SECRET, {
-            expiresIn: 36000
+            expiresIn: 3600
         }, (err, token) => {
             if(err) throw err
             res.send({token})
         })
     } catch (err) {
         console.error(err.message)
-        res.status(500).send('Server Error 1') 
+        res.status(500).send('Server Error') 
     }
 })
 

@@ -39,7 +39,7 @@ const Login = (props) => {
       </form>
       <div className="question">
       {errors !== null && <button className="danger">
-      Errors
+      {errors.msg ? errors.msg : errors.error[0].msg}
       <span onClick={() => clearErrors()}>X</span></button>}
       <p>Don't have an account? {" "} <Link to = '/register'>Sign Up</Link></p>
       </div>
